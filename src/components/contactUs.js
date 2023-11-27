@@ -16,6 +16,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import SideNavBar from './sideNavbar';
+import ThemeToggle, { ThemeApp } from './theme';
 
 
 const defaultTheme = createTheme();
@@ -34,7 +35,11 @@ export default function Contact() {
   return (
     <div>
         <SideNavBar/>
-        <div style={{display:'flex',paddingTop:'22px',marginLeft:'0px',backgroundColor:'lightgray',height:'672px'}}>
+        <ThemeApp>
+          <ThemeToggle/>
+        </ThemeApp>
+        
+        <div style={{display:'flex',paddingTop:'22px',marginLeft:'0px',height:'672px'}}>
           <div style={{marginLeft:"80px",marginTop:'50px'}}>
             <div style={{backgroundRepeat:'no-repeat',color:'black',backgroundColor:'#818FB4',height:'550px',borderRadius:'8px',width:'400px',marginLeft:'250px',paddingLeft:'50px'}}>
                 <br/>

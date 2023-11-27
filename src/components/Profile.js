@@ -17,15 +17,15 @@ export default function Profile(){
     const savedEmail = localStorage.getItem('loggedInEmail');
     const savedLastName = localStorage.getItem('loggedInLastName');
     return(
-        <div>
+        <div style={{backgroundColor:'lightgray',height:'734px'}}>
             <SideNavBar/>
-            <div className="Profile-Container">
+            <div className="Profile-Container" >
                 <div className="Profile-Info">
                 <Card sx={{ maxWidth: 350 }}>
                     <CardMedia
                         component="img" alt="Profile Photo"
                         height="370"
-                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnTt6oQ102Y-TEHPHgKnMVvKjRIqyrgYEJvA&usqp=CAU"
+                        image="https://www.realmenrealstyle.com/wp-content/uploads/2023/08/5-Simple-Tips-To-Raise-Your-Status-As-A-Man.jpg"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div"> {savedUserName} </Typography>

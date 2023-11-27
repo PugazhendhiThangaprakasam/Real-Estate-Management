@@ -17,7 +17,7 @@ function Footer(){
           <div className="footer-section">
             <h2>Explore</h2>
             <ul style={{fontSize:'17px'}}>
-              <li><a href="/">Home</a></li>
+              <li><a href="/loginnedhome">Home</a></li>
               <li><a href="/listings">Listings</a></li>
               <li><a href="/about">About Us</a></li>
               <li><a href="/contact">Contact</a></li>

@@ -72,7 +72,7 @@ export default function Login() {
     {
       setSuccess(true);
       console.log("success");
-      navigate('/');
+      navigate('/loginnedhome');
     }   
     else
     {

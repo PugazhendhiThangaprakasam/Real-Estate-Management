@@ -107,7 +107,7 @@ export default function SideNavBar() {
             <ListItemButton href='/rent' sx={{margin:'10px', fontFamily:'cursive',color:'black'}}><StoreIcon/>RENT</ListItemButton>
             <ListItemButton href='/plot' sx={{margin:'10px', fontFamily:'cursive',color:'black'}}><StoreIcon/>PLOTS</ListItemButton>
             <ListItemButton href='/contact' sx={{margin:'10px', fontFamily:'cursive',color:'black'}}><PhoneIcon/>Contact Us</ListItemButton>
-            <ListItemButton sx={{margin:'10px', fontFamily:'cursive',color:'black'}}><SupportAgentIcon/>AGENTS</ListItemButton>
+            <ListItemButton href='/agents' sx={{margin:'10px', fontFamily:'cursive',color:'black'}}><SupportAgentIcon/>AGENTS</ListItemButton>
           </List>
         </Box>
       </Drawer>

@@ -41,6 +41,20 @@
       "email": "pugal@gmail.com",
       "password": "123",
       "id": 6
+    },
+    {
+      "firstName": "Prajan",
+      "lastName": "Ravi",
+      "email": "prajan@gmail.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "firstName": "Naveen ",
+      "lastName": "Kumar",
+      "email": "naveen@gmail.com",
+      "password": "123",
+      "id": 8
     }
   ]
 }

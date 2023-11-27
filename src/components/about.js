@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 export default function About()
 {
     return(
-        <div>
+        <div style={{backgroundColor:'#DFD7BF',height:'736px'}}>
             <Navbar/>
             <Container sx={{marginTop:'60px',fontFamily:'ariel',fontSize:'22px'}}>
                 <h1>About Us</h1>

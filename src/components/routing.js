@@ -9,6 +9,7 @@ import LoginnedHome from "./LoginnedHome";
 import Contact from "./contactUs";
 import Component from "./houseDetails";
 import ViewDetails from "./detailsView";
+import AgentsDetails from "./agents";
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
     { path: 'houseDetails' , element:<Component/>},
     { path: '/rent' , element:<Component/>},
     { path: '/plot' , element:<Component/>},
-    { path: '/viewDetails', element:<ViewDetails/>}
+    { path: '/viewDetails', element:<ViewDetails/>},
+    { path: '/agents', element:<AgentsDetails/>}
 ]);
 
 export default router;
