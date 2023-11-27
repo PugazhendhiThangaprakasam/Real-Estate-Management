@@ -8,14 +8,26 @@ import Typography from '@mui/material/Typography';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import './Profile.css'
+import axios from "axios";
 import SideNavBar from "./sideNavbar";
 import { useNavigate } from "react-router-dom";
 export default function Profile(){
     const navigate = useNavigate();
-    
+    const id = 8;
     const savedUserName = localStorage.getItem('loggedInUserName');
     const savedEmail = localStorage.getItem('loggedInEmail');
     const savedLastName = localStorage.getItem('loggedInLastName');
+    const delAccount=()=>{
+        const api="http://localhost:3001/users";
+        axios.delete(`http://localhost:3001/users/${id}`)
+        .then(response => {
+            console.log(response.data);
+            navigate('/');
+        })
+        .catch(error => {
+            console.error('Error:',error);
+        });
+    }
     return(
         <div style={{backgroundColor:'lightgray',height:'734px'}}>
             <SideNavBar/>
@@ -63,6 +75,8 @@ export default function Profile(){
                         
                     </table>
                 </div>
+                <br/>
+                <button onClick={delAccount}>Delete Account</button>
             </div>
         </div>
     )

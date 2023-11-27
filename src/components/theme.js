@@ -1,12 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 import { ThemeProvider, createMuiTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-
 import { CssBaseline } from '@mui/material';
 
-
 const ThemeContext = createContext();
-
 
 const lightTheme = createMuiTheme({
   palette: {
@@ -20,13 +17,14 @@ const darkTheme = createMuiTheme({
   },
 });
 
-
 export const ThemeApp = ({ children }) => {
-  const [theme, setTheme] = useState(lightTheme); 
+  const [theme, setTheme] = useState(lightTheme);
 
-  
   const toggleTheme = () => {
-    setTheme(theme === lightTheme ? darkTheme : lightTheme);
+    // setTheme((prevTheme) => (prevTheme === lightTheme ? darkTheme : lightTheme));
+    setTheme(prevTheme => (
+        prevTheme.palette.mode === 'light' ? darkTheme : lightTheme
+      ));
   };
 
   return (
@@ -39,14 +37,13 @@ export const ThemeApp = ({ children }) => {
   );
 };
 
-// Component that uses the theme context
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div style={{display:'flex',marginRight:650,justifyContent:'flex-end',position:'absolute',right:0,color:'black'}}>
+    <div style={{ display: 'flex', marginRight: 50, justifyContent: 'flex-end', position: 'absolute', right: 'calc(50vw - 140px)', color: 'black' }}>
       <Button variant="contained" color="primary" onClick={toggleTheme}>
-        {theme === lightTheme ? 'Switch to Dark Theme' : 'Switch to Light Theme'}
+        {theme.palette.mode === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}
       </Button>
     </div>
   );
